@@ -1,0 +1,138 @@
+{
+  "scene": {
+    "nodes": [
+      {
+        "class_name": "Node",
+        "uid": "node_1",
+        "name": "String",
+        "position": [-157.0, -144.0],
+        "inputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_1.in_1",
+            "name": "value"
+          }
+        ],
+        "outputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_1.out_1",
+            "name": "result"
+          }
+        ]
+      },
+      {
+        "class_name": "Node",
+        "uid": "node_2",
+        "name": "String",
+        "position": [-154, 143],
+        "inputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_2.in_1",
+            "name": "value"
+          }
+        ],
+        "outputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_2.out_1",
+            "name": "result"
+          }
+        ]
+      },
+      {
+        "class_name": "Node",
+        "uid": "node_3",
+        "name": "Add",
+        "position": [106.0, -9.0],
+        "inputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_3.in_1",
+            "name": ""
+          },
+          {
+            "class_name": "Port",
+            "uid": "node_3.in_2",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_3.out_1",
+            "name": "result"
+          }
+        ]
+      },
+      {
+        "class_name": "Node",
+        "uid": "node_4",
+        "name": "Logger",
+        "position": [300.0, -10.0],
+        "inputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_4.in_1",
+            "name": ""
+          }
+        ],
+        "outputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_4.out_1",
+            "name": "hello world"
+          }
+        ]
+      },
+      {
+        "class_name": "Node",
+        "uid": "node_4",
+        "name": "Write in file",
+        "position": [475.0, -8.0],
+        "inputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_5.in_1",
+            "name": "data"
+          },
+          {
+            "class_name": "Port",
+            "uid": "node_5.in_2",
+            "name": "file path"
+          }
+        ],
+        "outputs": [
+          {
+            "class_name": "Port",
+            "uid": "node_5.out_1",
+            "name": "file"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "uid": "edge_1",
+        "source": "node_1.out_1",
+        "target": "node_3.in_1"
+      },
+      {
+        "uid": "edge_2",
+        "source": "node_2.out_1",
+        "target": "node_3.in_2"
+      },
+      {
+        "uid": "edge_3",
+        "source": "node_3.out_1",
+        "target": "node_4.in_1"
+      },
+      {
+        "uid": "edge_4",
+        "source": "node_4.out_1",
+        "target": "node_5.in_1"
+      }
+    ]
+  }
+}
